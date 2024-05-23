@@ -12,7 +12,7 @@
     
     <link rel="stylesheet" type="text/css" href="/webroot/css/style.css?r=<?= rand(111111, 999999) ?>" />
 
-    <title><?= (isset($data['headTitle'])) ? $data['headTitle'] : '' ?> | Admin</title>
+    <title><?= (isset($data['headTitle'])) ? $data['headTitle'] : '' ?></title>
   </head>
   <body>
     <?= $content ?>

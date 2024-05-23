@@ -1,0 +1,68 @@
+body {
+    color: #444;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.header {
+	padding: 20px 0 20px 0;
+	background-color: #0a7fcf;
+}
+
+.header img {
+	display: inline-table;
+	width: 100px;
+}
+
+.header h2 {
+	margin: 0 0 0 20px;
+	display: inline-table;
+	color: #fff;
+}
+
+.title {
+	font-size: 30px;
+	margin: 20px 0;
+	padding-bottom: 5px;
+	display: inline-table;
+}
+
+.btn {
+	margin: 20px 5px;
+}
+
+.actions {
+	text-align: center;
+}
+
+.actions .btn {
+	margin: 5px;
+}
+
+.table td,
+.table th {
+    vertical-align: middle;
+}
+
+.actions .btn,
+.actions form {
+	display: inline-block;
+}
+
+.list-unstyled {
+	margin-bottom: 0;
+	color: #721c24;
+}
+
+.login {
+    padding: 10px;
+}
+
+.login img {
+    padding: 20px;
+}
+
+.login img,
+.login .btn {
+    margin: 0 auto;
+    display: table;
+}
