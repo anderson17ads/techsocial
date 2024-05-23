@@ -18,6 +18,13 @@ class Admin
      */
     public static function load(PlugRoute $router): void
     {
-        $router->get('/users')->controller(UserController::class, 'index');
+        $router->prefix('/users')
+            ->group(function ($route) {
+                $route->get('')->controller(UserController::class, 'index');
+                $route->get('/add')->controller(UserController::class, 'add');
+                $route->get('/edit/{id}')
+                    ->controller(UserController::class, 'edit')
+                    ->rule('id', '\d+');
+            });
     }
 }   
