@@ -2,10 +2,12 @@
 
 namespace App\Controller\Admin;
 
+use App\Core\Controller;
+
 /**
  * This class is used to manage users in the admin
  */
-class UserController
+class UserController extends Controller
 {
     public function index()
     {
