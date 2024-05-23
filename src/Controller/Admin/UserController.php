@@ -46,6 +46,7 @@ class UserController extends Controller
     /**
 	 * Edit
 	 *
+     * @param Request $request
 	 * @return void
 	 */
     public function edit(Request $request)

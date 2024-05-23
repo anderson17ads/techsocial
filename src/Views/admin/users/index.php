@@ -25,11 +25,17 @@
                                 <td class="data-grid-td"><?= $user->first_name ?></td>
                                 <td class="data-grid-td"><?= $user->last_name ?></td>
                                 <td class="actions">
-                                    <a class="btn btn-secondary" href="/admin/users/edit/<?= $user->id ?>">Editar</a>
-                                    <form action="/admin/users/delete/<?= $user->id ?>" method="POST">
-                                        <input type="hidden" name="_METHOD" value="DELETE"/>
-                                        <input class="btn btn-danger" type="submit" value="Excluir">
-                                    </form>
+                                    <a 
+                                        class="btn btn-secondary" 
+                                        href="/admin/users/edit/<?= $user->id ?>">
+                                        Editar
+                                    </a>
+                                    <a 
+                                        data-grid-delete
+                                        class="btn btn-danger" 
+                                        href="/admin/users/delete/<?= $user->id ?>">
+                                        Excluir
+                                    </a>
                                 </td>
                             </tr>
                         <?php endforeach ?>

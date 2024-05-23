@@ -41,6 +41,6 @@
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-    <script src="/webroot/js/script.js"></script>
+    <script src="/webroot/js/script.js?r=<?= rand(111111, 999999) ?>"></script>
   </body>
 </html>

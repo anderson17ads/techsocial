@@ -230,9 +230,8 @@ footer {
 }
 
 .data-grid .data-grid-th {
-  background: #514943;
+  background: #ccc;
   border: .1rem solid #8a837f;
-  border-left-color: transparent;
   color: #fff;
   font-weight: 600;
   padding: 0;
