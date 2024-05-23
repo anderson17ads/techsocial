@@ -11,6 +11,11 @@ class UserController extends Controller
 {
     public function index()
     {
-        die('User controller not implemented');
+        $items = [];
+        
+        $this->view('admin/users/index', [
+            'headTitle' => 'Users - List',
+            'items' => $items
+        ]);
     }
 }

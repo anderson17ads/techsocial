@@ -31,13 +31,12 @@ class Controller
      */
     public function view($view = null, $data = [], $template = 'default')
     {
-        if (!is_null($view)) {                        
-            
+        if (!is_null($view)) {
             ob_start();
-            include __DIR__ . "/../views/{$view}.php";
+            include __DIR__ . "/../Views/{$view}.php";
             $content = ob_get_clean();
 
-            require __DIR__ . "/../views/templates/{$template}.php";
+            require __DIR__ . "/../Views/templates/{$template}.php";
         }
     }    
 
