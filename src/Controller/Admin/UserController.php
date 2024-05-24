@@ -42,19 +42,10 @@ class UserController extends Controller
             $this->request->redirect('/admin/users');
         }
 
-        $mock = (object) [
-            'first_name' => 'John',
-            'last_name' => 'Doe',
-            'document' => 123456,
-            'email' => 'WjQpZ@example.com',
-            'phone_number' => 123456789,
-            'birth_date' => '22/11/1988',
-        ];
-
         $this->view('admin/users/edit', [
             'headTitle' => 'Usuários - Editar',
             'message' => '',
-            'user' => $mock,
+            'id' => $id,
         ], 'admin');
     }
 }

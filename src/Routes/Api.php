@@ -21,10 +21,11 @@ class Api
         $router->prefix('/users')
             ->group(function ($route) {
                 $route->get('')->controller(UserController::class, 'index');
-                $route->post('/add')->controller(UserController::class, 'add');
-                $route->put('/edit/{id}')
-                    ->controller(UserController::class, 'edit')
+                $route->get('/getById/{id}')
+                    ->controller(UserController::class, 'getById')
                     ->rule('id', '\d+');
+                $route->post('/store')->controller(UserController::class, 'store');
+                $route->put('/update')->controller(UserController::class, 'update');
                 $route->delete('/delete/{id}')->controller(UserController::class, 'delete')
                     ->rule('id', '\d+');
             });

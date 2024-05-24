@@ -17,7 +17,7 @@
                         <th class="data-grid-th" scope="col"></th>
                     </tr>
                 </thead>
-                <tbody data-grid-list>
+                <tbody data-user-list>
                     
                 </tbody>
             </table>

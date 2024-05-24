@@ -4,7 +4,7 @@
             <img src="/webroot/images/bt-close.png" alt="Close Menu" width="24" height="24" />
         </a>
     </div>
-    <a href="/dashboard">
+    <a href="/admin/dashboard">
         <img src="https://techsocial.com.br/assets/images/techsocial-marca-principal-528x102.png" alt="Welcome" width="200" height="43" />
     </a>
     <div>

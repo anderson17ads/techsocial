@@ -16,23 +16,21 @@
 
     <div class="row">
         <div class="col-xs-12 col-sm-12">
-            <form 
-                method="POST" 
-                action="/admin/users/edit/<?= $data['user']->id ?>" 
+            <form
+                method="POST"
+                data-user-edit="<?= $data['id'] ?>"
                 data-toggle="validator" 
                 role="form">
-
-                <input type="hidden" name="_METHOD" value="PUT"/>
 
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="first_name">Nome</label>
-                        <input name="first_name" value="<?= $data['user']->first_name ?>" type="text" class="form-control" id="first_name" required>
+                        <input name="first_name" type="text" class="form-control" id="first_name" required>
                         <div class="help-block with-errors"></div>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="last_name">Sobrenome</label>
-                        <input name="last_name" value="<?= $data['user']->last_name ?>" type="text" class="form-control" id="last_name" required>
+                        <input name="last_name" type="text" class="form-control" id="last_name" required>
                         <div class="help-block with-errors"></div>
                     </div>                    
                 </div>
@@ -40,12 +38,12 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="document">Documento</label>
-                        <input name="document" value="<?= $data['user']->document ?>" type="text" class="form-control" id="document" required>
+                        <input name="document" type="text" class="form-control" id="document" required>
                         <div class="help-block with-errors"></div>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="email">Email</label>
-                        <input name="email" value="<?= $data['user']->email ?>" type="text" class="form-control" id="email" required>
+                        <input name="email" type="text" class="form-control" id="email" required>
                         <div class="help-block with-errors"></div>
                     </div>                    
                 </div>
@@ -53,12 +51,12 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="phone_number">Telefone</label>
-                        <input name="phone_number" value="<?= $data['user']->phone_number ?>" type="text" class="form-control" id="phone_number" required>
+                        <input name="phone_number" type="text" class="form-control" id="phone_number" required>
                         <div class="help-block with-errors"></div>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="birth_date">Data de Nascimento</label>
-                        <input name="birth_date" value="<?= $data['user']->birth_date ?>" type="text" class="form-control" id="birth_date" required>
+                        <input name="birth_date" type="text" class="form-control" id="birth_date" required>
                         <div class="help-block with-errors"></div>
                     </div>                    
                 </div>

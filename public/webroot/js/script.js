@@ -10,5 +10,9 @@ function includeJsFiles(files) {
 }
 
 includeJsFiles([
-    '/webroot/js/admin/users.js',
+    '/webroot/js/admin/users/list.js',
+    '/webroot/js/admin/users/delete.js',
+    '/webroot/js/admin/users/edit.js',
+    '/webroot/js/admin/users/update.js',
+    '/webroot/js/admin/users/store.js',
 ]);

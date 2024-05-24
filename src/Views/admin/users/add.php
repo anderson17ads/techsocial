@@ -18,7 +18,7 @@
         <div class="col-xs-12 col-sm-12">
             <form 
                 method="POST" 
-                action="/admin/users/add" 
+                data-user-add
                 data-toggle="validator" 
                 role="form">
 
