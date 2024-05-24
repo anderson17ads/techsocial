@@ -3,7 +3,6 @@
 namespace App\Controller\Admin;
 
 use App\Core\Controller;
-use PlugRoute\Http\Request;
 
 /**
  * This class is used to manage users in the admin
@@ -12,21 +11,8 @@ class UserController extends Controller
 {
     public function index()
     {
-        $mock = [
-            (object) [
-            'id' => 1,
-            'first_name' => 'John',
-            'last_name' => 'Doe',
-            'document' => 123456,
-            'email' => 'WjQpZ@example.com',
-            'phone_number' => 123456789,
-            'birth_date' => '22/11/1988',
-            ]
-        ];
-
         $this->view('admin/users/index', [
             'headTitle' => 'Users - List',
-            'users' => $mock
         ], 'admin');
     }
 
@@ -46,15 +32,14 @@ class UserController extends Controller
     /**
 	 * Edit
 	 *
-     * @param Request $request
 	 * @return void
 	 */
-    public function edit(Request $request)
+    public function edit()
     {
-        $id = $request->parameter('id');
+        $id = $this->request->parameter('id');
 
         if (!$id) {
-            $request->redirect('/admin/users');
+            $this->request->redirect('/admin/users');
         }
 
         $mock = (object) [

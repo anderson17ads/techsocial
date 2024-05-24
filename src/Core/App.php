@@ -3,6 +3,7 @@
 namespace App\core;
 
 use App\Routes\Admin;
+use App\Routes\Api;
 use PlugRoute\Http\Request;
 use PlugRoute\PlugRoute;
 
@@ -21,9 +22,15 @@ class App
     {
         $router = new PlugRoute();
 
+        // Public routes
         $router->prefix('/admin')
             ->group([Admin::class, 'load']);
 
+        // Admin routes
+        $router->prefix('/api')
+            ->group([Api::class, 'load']);
+
+        // Traitment public files
         $router->fallback()->callback(function (Request $request) {
             $fullUrl = $request->getUrl();
             $baseUrl = '/public';

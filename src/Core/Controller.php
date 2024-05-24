@@ -1,8 +1,27 @@
 <?php
+
 namespace App\Core;
+
+use PlugRoute\Http\Request;
+use PlugRoute\Http\Response;
 
 class Controller
 {
+    /**
+     * PlugRoute Request
+     */
+    public $request;
+    
+    /**
+     * PlugRoute Response
+     */
+    public $response;
+
+    public function __construct(Request $request, Response $response) {
+        $this->request = $request;
+        $this->response = $response;
+    }
+
     /**
      * Instantiate the model
      * 

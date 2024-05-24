@@ -1,16 +1,14 @@
-;(function () {
-    'use strict';
+function includeJsFiles(files) {
+    files.map((jsFile) => {
+        const js = document.createElement("script");
     
-    $('[data-grid-delete]').on('click', function (e) {
-        e.preventDefault();
-        
-        const response = $.ajax({
-            url: $(this).attr('href'),
-            type: 'DELETE',
-            success: function(result) {
-                console.log(result);
-            }
-        });
-
+        js.type = "text/javascript";
+        js.src = jsFile;
+    
+        document.body.appendChild(js);
     });
-}());
+}
+
+includeJsFiles([
+    '/webroot/js/admin/users.js',
+]);
